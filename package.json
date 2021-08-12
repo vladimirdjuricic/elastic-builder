@@ -27,7 +27,7 @@
     "print-version": "cross-env-shell echo v$npm_package_version",
     "prepublishOnly": "npm run -s build",
     "postpublish": "bash deploy-docs.sh",
-    "prepack": "npm run build"
+    "install": "npm run build"
   },
   "license": "MIT",
   "dependencies": {
