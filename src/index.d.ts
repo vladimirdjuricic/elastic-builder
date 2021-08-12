@@ -6148,6 +6148,16 @@ declare namespace esb {
          */
         format(fmt: string): this;
 
+
+        /**
+         * Sets the maximum number of matching hits required to return the terms.
+         *
+         * @param {number} maxDocCnt Integer value for maximum number of documents
+         * required to return bucket in response
+         */
+         maxDocCount(maxDocCnt: number): this;
+
+
         /**
          * Sets the minimum number of matching hits required to return the terms.
          *

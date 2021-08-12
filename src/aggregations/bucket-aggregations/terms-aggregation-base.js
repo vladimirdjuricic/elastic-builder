@@ -67,6 +67,21 @@ class TermsAggregationBase extends BucketAggregationBase {
     }
 
     /**
+     * Sets the minimum number of matching hits required to return the terms.
+     *
+     * @example
+     * const agg = esb.significantTermsAggregation('tags', 'tag').maxDocCount(10);
+     *
+     * @param {number} maxDocCnt Integer value for maximum number of documents
+     * required to return bucket in response
+     * @returns {TermsAggregationBase} returns `this` so that calls can be chained
+     */
+    maxDocCount(maxDocCnt) {
+        this._aggsDef.max_doc_count = maxDocCnt;
+        return this;
+    }
+
+    /**
      * Sets the parameter which regulates the _certainty_ a shard has if the term
      * should actually be added to the candidate list or not with respect to
      * the `min_doc_count`.
